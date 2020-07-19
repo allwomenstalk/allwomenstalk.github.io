@@ -5304,6 +5304,9 @@
 
 </div>
 <script>
-$(".list-group a").addClass("list-group-item list-group-item-action display-4 text-nowrap overflow-hidden")
-</script> 
+$(".list-group-item").wrap('<div class="col mb-4"><div class="card h-25"><div class="card-body"><h5 class="card-title"></h5></div></div></div>');
+$(".list-group-item").removeClass('list-group-item')
+$(".list-group").addClass("row row-cols-1 row-cols-md-4 mt-5");
+$(".list-group").removeClass('list-group');
+</script>
 </body></html>

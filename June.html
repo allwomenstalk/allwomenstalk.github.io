@@ -3114,7 +3114,6 @@
 <a href="http://love.allwomenstalk.com/common-ways-girls-use-men" class="list-group-item">8 Common Ways Girls Use Men </a>
 <a href="http://hair.allwomenstalk.com/compelling-reasons-not-to-wash-your-hair" class="list-group-item">7 Compelling Reasons Not to Wash Your Hair </a>
 <a href="http://fashion.allwomenstalk.com/adorable-diy-owl-fashion-accessories" class="list-group-item">11 Adorable DIY Owl Fashion Accessories </a>
-<a href="http://wedding.allwomenstalk.com/tips-for-planning-the-perfect-bachelorette-party" class="list-group-item">8 Tips for Planning the Perfect Bachelorette Party </a>
 <a href="http://shoes.allwomenstalk.com/stylish-saddle-shoes" class="list-group-item">7 Stylish Saddle Shoes </a>
 <a href="http://makeup.allwomenstalk.com/lipsticks-with-spf-ideal-for-summer" class="list-group-item">10 Lipsticks with SPF Ideal for Summer </a>
 <a href="http://fashion.allwomenstalk.com/retro-looking-fashion-accessories" class="list-group-item">9 Retro Looking Fashion Accessories </a>
@@ -4623,6 +4622,9 @@
 
 </div>
 <script>
-$(".list-group a").addClass("list-group-item list-group-item-action display-4 text-nowrap overflow-hidden")
-</script> 
+$(".list-group-item").wrap('<div class="col mb-4"><div class="card h-25"><div class="card-body"><h5 class="card-title"></h5></div></div></div>');
+$(".list-group-item").removeClass('list-group-item')
+$(".list-group").addClass("row row-cols-1 row-cols-md-4 mt-5");
+$(".list-group").removeClass('list-group');
+</script>
 </body></html>
