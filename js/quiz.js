@@ -27,7 +27,7 @@ function generateHTML(data) {
                     <p class="text-base font-semibold leading-7 text-pink-600">Quiz Time</p>
                     <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">${item.title}</h2>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
-                        <a href="https://quiz.allwomenstalk.com/${item._id}" class="rounded-md bg-pink-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Play now</a>
+                        <a href="https://quiz.allwomenstalk.com/${item._id}" class="_quizwidget rounded-md bg-pink-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Play now</a>
                     </div>
                 </div>
             </div>
