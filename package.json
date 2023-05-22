@@ -1,0 +1,13 @@
+{
+    "name": "my-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "minify": "terser js/quiz.js -o js/quiz.min.js -c -m"
+    },
+    "devDependencies": {
+      "terser": "^5.5.1"
+    }
+  }
+  
