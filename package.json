@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "minify": "terser js/quiz.js -o js/quiz.min.js -c -m"
+      "minify": "terser js/quiz.js -o js/quiz.min.js -c -m", 
+      "deploy": "npm run minify && git add . && git commit -m 'update' && git push"
     },
     "devDependencies": {
       "terser": "^5.5.1"
