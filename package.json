@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "minify": "for file in js/*.js; do terser \"$file\" -o \"${file%.*}.min.js\" -c -m; done",
+      "minify": "for file in js/*.js; do if [[ \"$file\" != *\".min.js\" ]]; then terser \"$file\" -o \"${file%.*}.min.js\" -c -m; fi; done",
       "deploy": "npm run minify && git add . && git commit -m 'update' && git push"
     },
     "devDependencies": {
