@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "minify": "terser js/quiz.js -o js/quiz.min.js -c -m", 
+      "minify": "for file in js/*.js; do terser \"$file\" -o \"${file%.*}.min.js\" -c -m; done",
       "deploy": "npm run minify && git add . && git commit -m 'update' && git push"
     },
     "devDependencies": {
