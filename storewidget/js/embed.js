@@ -11,7 +11,7 @@ styleSheet.replaceSync(styleElement.textContent);
 shadowRoot.adoptedStyleSheets = [styleSheet];
 
 // Assuming you have the HTML content stored in a separate file called 'widget.html'
-fetch('https://allwomenstalk.github.io/storewidget/js/embed.html')
+fetch('https://allwomenstalk.github.io/storewidget/embed.html')
   .then(response => response.text())
   .then(html => {
     console.log(html);
