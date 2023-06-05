@@ -1,5 +1,19 @@
 var url = "https://us-central1.gcp.data.mongodb-api.com/app/shopping-axacl/endpoint/products";
 var container = document.querySelector("#widget");
+var host = "http://shop.allwomenstalk.com";
+
+var headerDiv = document.createElement("div");
+headerDiv.className = "md:flex md:items-center md:justify-between";
+
+headerDiv.innerHTML = `
+  <h2 class="text-2xl font-bold tracking-tight text-white">Trending products</h2>
+  <a href="${host}/collections/best-sellers" class="hidden text-sm font-medium text-pink-600 hover:text-pink-500 md:block">
+    Shop the collection
+    <span aria-hidden="true"> →</span>
+  </a>
+`;
+
+container.appendChild(headerDiv);
 
 var wrapperDiv = document.createElement("div");
 wrapperDiv.className = "mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8";
@@ -18,7 +32,7 @@ fetch(url)
           <img src="${product.image.src}" alt="${product.title}" class="p-4 h-full w-full object-contain object-center">
         </div>
         <h3 class="mt-4 text-sm text-gray-700 ">
-          <a href="${product.url}" class="_shopitem">
+          <a href="https://perfumerunway.com/products/${product._id}" class="_shopitem">
             <span class="absolute inset-0"></span>
             ${product.title}
           </a>
