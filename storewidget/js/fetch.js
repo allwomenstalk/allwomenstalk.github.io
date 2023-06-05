@@ -1,6 +1,13 @@
 var url = "https://us-central1.gcp.data.mongodb-api.com/app/shopping-axacl/endpoint/products";
 var container = document.querySelector("#widget");
 var host = "http://shop.allwomenstalk.com";
+var cssUrl = "https://allwomenstalk.github.io/storewidget/css/styles.css";
+
+var link = document.createElement("link");
+link.rel = "stylesheet";
+link.href = cssUrl;
+
+document.head.appendChild(link);
 
 var headerDiv = document.createElement("div");
 headerDiv.className = "md:flex md:items-center md:justify-between";
