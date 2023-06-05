@@ -3,12 +3,6 @@ var container = document.querySelector("#widget");
 var host = "http://shop.allwomenstalk.com";
 var cssUrl = "https://allwomenstalk.github.io/storewidget/css/styles.css";
 
-var link = document.createElement("link");
-link.rel = "stylesheet";
-link.href = cssUrl;
-
-document.head.appendChild(link);
-
 var headerDiv = document.createElement("div");
 headerDiv.className = "md:flex md:items-center md:justify-between";
 
@@ -20,7 +14,8 @@ headerDiv.innerHTML = `
   </a>
 `;
 
-container.appendChild(headerDiv);
+var shadowRoot = container.attachShadow({ mode: "open" });
+shadowRoot.appendChild(headerDiv);
 
 var wrapperDiv = document.createElement("div");
 wrapperDiv.className = "mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8";
@@ -39,7 +34,7 @@ fetch(url)
           <img src="${product.image.src}" alt="${product.title}" class="p-4 h-full w-full object-contain object-center">
         </div>
         <h3 class="mt-4 text-sm text-gray-700 ">
-          <a href="https://perfumerunway.com/products/${product._id}" class="_shopitem">
+          <a href="${host}/products/${product._id}" class="_shopitem">
             <span class="absolute inset-0"></span>
             ${product.title}
           </a>
@@ -55,7 +50,13 @@ fetch(url)
       wrapperDiv.appendChild(div);
     });
 
-    container.appendChild(wrapperDiv);
+    shadowRoot.appendChild(wrapperDiv);
+
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = cssUrl;
+
+    shadowRoot.appendChild(link);
   })
   .catch(error => {
     console.log("Error occurred while fetching data:", error);
