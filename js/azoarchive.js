@@ -49,7 +49,8 @@ function azo(blog,length) {
                 } else {
                     baseurl = `https://allwomenstalk.com/explore/`
                 }
-                el.url = baseurl + `#${el._id}`
+                
+                el.url = el.url || baseurl + `#${el._id}`
             })
           })
       },
