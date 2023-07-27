@@ -70,12 +70,12 @@ function loadWidgetIfVisible(entries) {
 
 // Intersection Observer to load the widget when the container is visible
 const productContainer = document.getElementById("productcontainer");
-const observer = new IntersectionObserver(loadWidgetIfVisible, {
+const productObserver = new IntersectionObserver(loadWidgetIfVisible, {
     root: null, // Use the viewport as the root
     rootMargin: "0px", // No margin for intersection
     threshold: 0.5, // 50% visibility threshold for loading
 });
-observer.observe(productContainer);
+productObserver.observe(productContainer);
 
 
 async function redirectToProduct(productId) {
