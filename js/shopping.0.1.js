@@ -39,7 +39,7 @@ async function fetchAndDisplayProducts() {
       <div class="">
         <div class="mx-auto max-w-xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-3xl lg:px-8">
           <div class="md:flex md:items-center md:justify-between">
-            <h2 class="text-2xl font-bold tracking-tight text-gray-900">Trending products</h2>
+            <h2 class="text-2xl font-bold tracking-tight text-gray-900">SHOP NOW<br> Trending Products ⚡️</h2>
             <a href="#" class="hidden text-sm font-medium text-indigo-600 hover:text-indigo-500 md:block">
               Shop the collection
               <span aria-hidden="true"> &rarr;</span>
