@@ -10,7 +10,7 @@ function createProductBlock(product) {
     <div class="h-56 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 ">
         <img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover object-center">
     </div>
-    <p class="mt-2 text-sm font-medium text-gray-900">$${product.price}</p>
+    <!-- <p class="mt-2 text-sm font-medium text-gray-900">$${product.price}</p> -->
     <h3 class="mt-2 text-sm text-gray-700 text-left">
         <button onclick="redirectToProduct('${product._id}')" class="text-left">
         <span class="absolute inset-0"></span>
