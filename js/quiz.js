@@ -1,9 +1,9 @@
 // Function to fetch data from MongoDB
 function fetchData() {
-  
-  let endpoint = "https://us-east-1.aws.data.mongodb-api.com/app/azoio-evvkb/endpoint/quizzes" 
+  var host = window.location.hostname;
+  let endpoint = "https://us-east-1.aws.data.mongodb-api.com/app/azoio-evvkb/endpoint/quizzes?host=" + host;
   var postId = document.head.dataset.postid;
-  if (postId) { endpoint = endpoint + "/?postId=" + postId; }
+  if (postId) { endpoint = endpoint + "&postId=" + postId; }
   fetch(
     endpoint,
     {
