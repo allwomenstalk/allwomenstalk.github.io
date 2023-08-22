@@ -37,7 +37,7 @@ function generateHTML(data) {
                   <p class="text-sm font-semibold text-pink-600">Allwomenstalk Quiz</p>
                   <a href="javaScript:fetchData()" class="text-sm font-semibold leading-6 text-gray-500">Change topic <span aria-hidden="true">↻</span></a>
                 </div>
-                <h2 class="my-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">${item.title}</h2>
+                <h2 class="my-12 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">${item.title}</h2>
                 <div class="flex items-center gap-x-6">
                     <a href="https://quiz.allwomenstalk.com/${item._id}/?postId=${postId}&host=${host}" class="rounded-md bg-pink-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">Start Quiz</a>
                     <a href="https://quiz.allwomenstalk.com/" class="text-sm font-semibold leading-6 text-gray-900">Explore More <span aria-hidden="true">→</span></a>
